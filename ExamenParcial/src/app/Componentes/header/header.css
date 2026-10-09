@@ -1,0 +1,5 @@
+.hero {
+  min-height: 80vh;
+  padding-top: 56px; /* espacio para que el menú fijo no tape la portada */
+  background: linear-gradient(135deg, #0b2a6f, #1e5fbf);
+}

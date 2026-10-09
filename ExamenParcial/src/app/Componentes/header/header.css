@@ -33,3 +33,19 @@
   font-size: 2rem;
   font-weight: 700;
 }
+
+.logo-img {
+  height: 40px;
+  width: auto;
+    background: #fff;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+.hero {
+  min-height: 90vh;
+  padding-top: 56px;
+  background:
+    linear-gradient(rgba(59, 15, 122, 0.85), rgba(91, 33, 182, 0.7)),
+    url('https://blogs.ucontinental.edu.pe/wp-content/uploads/2019/05/logros-universidad-continental.jpg') center / cover no-repeat;
+}

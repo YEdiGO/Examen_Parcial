@@ -3,9 +3,10 @@
   <!-- ===== NOSOTROS: HISTORIA, MISIÓN Y VISIÓN ===== -->
   <section id="nosotros" class="py-5">
     <div class="container">
-      <h2 class="text-center text-uni fw-bold mb-4">Sobre la universidad</h2>
+      <h2 class="section-title">Sobre la universidad</h2>
+      <p class="section-subtitle">Conoce quiénes somos</p>
 
-      <h4>Nuestra historia</h4>
+      <h4 class="text-uni fw-semibold">Nuestra historia</h4>
       <p class="mb-4">
         La Universidad Continental nació en Huancayo en 1998 con el propósito de formar
         profesionales competentes. Desde entonces ha crecido en carreras, sedes y estudiantes,
@@ -14,8 +15,9 @@
 
       <div class="row g-4">
         <div class="col-12 col-md-6">
-          <div class="card h-100 bg-uni text-white">
-            <div class="card-body">
+          <div class="card tarjeta h-100 bg-uni text-white border-0">
+            <div class="card-body p-4">
+              <div class="icono-circulo icono-blanco mb-3">🎯</div>
               <h4 class="card-title">Misión</h4>
               <p class="card-text mb-0">
                 Formar profesionales íntegros e innovadores que contribuyan al desarrollo
@@ -25,8 +27,9 @@
           </div>
         </div>
         <div class="col-12 col-md-6">
-          <div class="card h-100 border-primary">
-            <div class="card-body">
+          <div class="card tarjeta h-100 borde-uni">
+            <div class="card-body p-4">
+              <div class="icono-circulo mb-3">🔭</div>
               <h4 class="card-title text-uni">Visión</h4>
               <p class="card-text mb-0">
                 Ser una universidad reconocida por su excelencia académica, su investigación
@@ -40,14 +43,15 @@
   </section>
 
   <!-- ===== OFERTA ACADÉMICA (con filtro por facultad) ===== -->
-  <section id="carreras" class="py-5 bg-light">
+  <section id="carreras" class="py-5 bg-uni-light">
     <div class="container">
-      <h2 class="text-center text-uni fw-bold mb-4">Oferta académica</h2>
+      <h2 class="section-title">Oferta académica</h2>
+      <p class="section-subtitle">Filtra las carreras por facultad</p>
 
       <!-- Botones de filtro: al hacer clic se cambia la facultad seleccionada -->
       <div class="text-center mb-4">
         @for (f of facultades; track f) {
-          <button class="btn btn-outline-primary btn-sm me-2 mb-2"
+          <button class="btn btn-sm btn-filtro me-2 mb-2"
                   [class.active]="filtro === f"
                   (click)="seleccionar(f)">
             {{ f }}
@@ -59,11 +63,11 @@
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
         @for (c of carrerasFiltradas(); track c.nombre) {
           <div class="col">
-            <div class="card h-100 shadow-sm">
+            <div class="card tarjeta h-100 shadow-sm border-0">
               <div class="card-body">
-                <span class="badge bg-uni mb-2">{{ c.facultad }}</span>
+                <span class="badge bg-uni mb-3">{{ c.facultad }}</span>
                 <h5 class="card-title">{{ c.nombre }}</h5>
-                <p class="card-text text-muted mb-0">Duración: {{ c.duracion }}</p>
+                <p class="card-text text-muted mb-0">⏱️ Duración: {{ c.duracion }}</p>
               </div>
             </div>
           </div>
@@ -75,16 +79,17 @@
   <!-- ===== FACULTADES ===== -->
   <section id="facultades" class="py-5">
     <div class="container">
-      <h2 class="text-center text-uni fw-bold mb-4">Facultades</h2>
+      <h2 class="section-title">Facultades</h2>
+      <p class="section-subtitle">Elige el área donde quieres formarte</p>
 
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
         @for (f of listaFacultades; track f.nombre) {
           <div class="col">
-            <div class="card h-100 shadow-sm text-center">
-              <div class="card-body">
-                <div class="display-4 mb-3">{{ f.icono }}</div>
-                <h5 class="card-title">{{ f.nombre }}</h5>
-                <p class="card-text">{{ f.detalle }}</p>
+            <div class="card tarjeta h-100 shadow-sm border-0 text-center">
+              <div class="card-body p-4">
+                <div class="icono-circulo icono-grande mx-auto mb-3">{{ f.icono }}</div>
+                <h5 class="card-title text-uni">{{ f.nombre }}</h5>
+                <p class="card-text text-muted">{{ f.detalle }}</p>
               </div>
             </div>
           </div>
@@ -94,29 +99,30 @@
   </section>
 
   <!-- ===== INFORMACIÓN PARA ESTUDIANTES ===== -->
-  <section id="estudiantes" class="py-5 bg-light">
+  <section id="estudiantes" class="py-5 bg-uni-light">
     <div class="container">
-      <h2 class="text-center text-uni fw-bold mb-4">Información para estudiantes</h2>
+      <h2 class="section-title">Información para estudiantes</h2>
+      <p class="section-subtitle">Todo lo que necesitas para empezar</p>
 
       <div class="row g-4 mb-5">
         <!-- Admisión: lista numerada porque son pasos en orden -->
         <div class="col-12 col-lg-5">
-          <h4 class="mb-3">Admisión en 4 pasos</h4>
-          <ol class="list-group list-group-numbered">
+          <h4 class="text-uni fw-semibold mb-3">Admisión en 4 pasos</h4>
+          <ol class="list-group list-group-numbered shadow-sm">
             @for (p of pasos; track p) {
-              <li class="list-group-item">{{ p }}</li>
+              <li class="list-group-item py-3">{{ p }}</li>
             }
           </ol>
         </div>
 
         <!-- Modalidades de estudio -->
         <div class="col-12 col-lg-7">
-          <h4 class="mb-3">Modalidades de estudio</h4>
+          <h4 class="text-uni fw-semibold mb-3">Modalidades de estudio</h4>
           @for (m of modalidades; track m.nombre) {
-            <div class="d-flex align-items-center bg-white rounded shadow-sm p-3 mb-3">
-              <div class="fs-1 me-3">{{ m.icono }}</div>
+            <div class="d-flex align-items-center bg-white rounded-3 shadow-sm p-3 mb-3 tarjeta">
+              <div class="icono-circulo me-3">{{ m.icono }}</div>
               <div>
-                <h5 class="mb-1">{{ m.nombre }}</h5>
+                <h5 class="mb-1 text-uni">{{ m.nombre }}</h5>
                 <p class="mb-0 text-muted">{{ m.detalle }}</p>
               </div>
             </div>
@@ -124,14 +130,14 @@
         </div>
       </div>
 
-      <h4 class="mb-3 text-center">Servicios y beneficios</h4>
+      <h4 class="text-uni fw-semibold mb-3 text-center">Servicios y beneficios</h4>
       <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3">
         @for (b of beneficios; track b.nombre) {
           <div class="col">
-            <div class="card h-100 border-success text-center">
+            <div class="card tarjeta h-100 border-0 shadow-sm text-center">
               <div class="card-body">
-                <div class="fs-1">{{ b.icono }}</div>
-                <h5 class="card-title">{{ b.nombre }}</h5>
+                <div class="icono-circulo mx-auto mb-2">{{ b.icono }}</div>
+                <h5 class="card-title text-uni">{{ b.nombre }}</h5>
                 <p class="card-text text-muted mb-0">{{ b.detalle }}</p>
               </div>
             </div>
@@ -144,19 +150,20 @@
   <!-- ===== NOTICIAS Y EVENTOS ===== -->
   <section id="noticias" class="py-5">
     <div class="container">
-      <h2 class="text-center text-uni fw-bold mb-4">Noticias y eventos</h2>
+      <h2 class="section-title">Noticias y eventos</h2>
+      <p class="section-subtitle">Mantente al día con lo que pasa en el campus</p>
 
       <div class="row row-cols-1 row-cols-md-3 g-4">
         @for (n of noticias; track n.titulo) {
           <div class="col">
-            <div class="card h-100 shadow-sm">
-              <div class="card-header d-flex justify-content-between">
-                <span class="badge bg-warning text-dark">{{ n.tipo }}</span>
-                <small class="text-muted">{{ n.fecha }}</small>
+            <div class="card tarjeta h-100 shadow-sm border-0">
+              <div class="card-header bg-uni text-white d-flex justify-content-between align-items-center">
+                <span class="badge bg-white text-uni">{{ n.tipo }}</span>
+                <small>{{ n.fecha }}</small>
               </div>
               <div class="card-body">
-                <h5 class="card-title">{{ n.titulo }}</h5>
-                <p class="card-text">{{ n.resumen }}</p>
+                <h5 class="card-title text-uni">{{ n.titulo }}</h5>
+                <p class="card-text text-muted">{{ n.resumen }}</p>
               </div>
             </div>
           </div>

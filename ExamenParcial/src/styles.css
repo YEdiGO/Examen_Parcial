@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+  scroll-behavior: smooth;
+}
+.bg-uni {
+  background-color: #0b2a6f;
+}
+.text-uni {
+  color: #0b2a6f;
+}
+section {
+  scroll-margin-top: 70px;
+}

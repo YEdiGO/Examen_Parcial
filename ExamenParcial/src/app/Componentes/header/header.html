@@ -1,15 +1,20 @@
+
+Header · HTML
 <header>
   <!-- Menú de navegación fijo arriba -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-uni fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-uni-dark fixed-top shadow">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#inicio">Universidad Continental</a>
-
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="#inicio">
+        <span class="logo-circulo me-2">UC</span>
+        Universidad Continental
+      </a>
+ 
       <!-- Botón hamburguesa: solo se ve en pantallas pequeñas -->
       <button class="navbar-toggler" type="button"
               data-bs-toggle="collapse" data-bs-target="#menu">
         <span class="navbar-toggler-icon"></span>
       </button>
-
+ 
       <div class="collapse navbar-collapse" id="menu">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
@@ -21,14 +26,33 @@
       </div>
     </div>
   </nav>
-
+ 
   <!-- Portada -->
   <section id="inicio" class="hero text-white text-center d-flex align-items-center">
     <div class="container py-5">
-      <h1 class="display-4 fw-bold mb-3">Tu futuro profesional empieza aquí</h1>
-      <p class="lead mb-4">Conoce nuestras carreras, facultades y toda la información para postular.</p>
-      <a href="#carreras" class="btn btn-warning btn-lg me-2">Ver carreras</a>
-      <a href="#estudiantes" class="btn btn-outline-light btn-lg">Cómo postular</a>
+      <span class="badge rounded-pill bg-light text-uni mb-3 px-3 py-2">Admisión 2026 abierta</span>
+      <h1 class="display-4 fw-bold mb-3">Tu futuro profesional <br> empieza aquí</h1>
+      <p class="lead mb-4">
+        Conoce nuestras carreras, facultades y toda la información para postular.
+      </p>
+      <a href="#carreras" class="btn btn-light text-uni fw-semibold btn-lg me-2 mb-2">Ver carreras</a>
+      <a href="#estudiantes" class="btn btn-outline-light btn-lg mb-2">Cómo postular</a>
+ 
+      <!-- Datos rápidos -->
+      <div class="row justify-content-center mt-5 g-3">
+        <div class="col-4 col-md-2">
+          <div class="dato-numero">25+</div>
+          <small>Años de historia</small>
+        </div>
+        <div class="col-4 col-md-2">
+          <div class="dato-numero">30+</div>
+          <small>Carreras</small>
+        </div>
+        <div class="col-4 col-md-2">
+          <div class="dato-numero">6</div>
+          <small>Facultades</small>
+        </div>
+      </div>
     </div>
   </section>
 </header>

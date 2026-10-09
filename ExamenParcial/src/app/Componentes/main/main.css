@@ -1,0 +1,60 @@
+/* Tarjetas con efecto al pasar el mouse */
+.tarjeta {
+  border-radius: 14px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(91, 33, 182, 0.18) !important;
+}
+
+.borde-uni {
+  border: 2px solid var(--uni);
+}
+
+.card-header {
+  border-radius: 14px 14px 0 0 !important;
+}
+
+/* Círculo para los íconos (emojis) */
+.icono-circulo {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--uni-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+.icono-grande {
+  width: 72px;
+  height: 72px;
+  font-size: 2.2rem;
+}
+.icono-blanco {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Botones del filtro de carreras */
+.btn-filtro {
+  background: #fff;
+  color: var(--uni);
+  border: 1px solid var(--uni);
+  border-radius: 50px;
+  padding: 0.4rem 1rem;
+}
+.btn-filtro:hover {
+  background: var(--uni-soft);
+}
+.btn-filtro.active {
+  background: var(--uni);
+  color: #fff;
+}
+
+/* Lista de pasos de admisión */
+.list-group-numbered > .list-group-item::before {
+  color: var(--uni);
+  font-weight: 700;
+}

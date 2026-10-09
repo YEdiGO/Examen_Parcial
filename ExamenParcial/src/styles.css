@@ -1,12 +1,60 @@
+/* ===== Paleta oficial: morado y blanco ===== */
+:root {
+  --uni: #5b21b6;        /* morado principal */
+  --uni-dark: #3b0f7a;   /* morado oscuro */
+  --uni-light: #f5f0ff;  /* fondo lila muy suave */
+  --uni-soft: #e9ddfb;   /* lila suave para detalles */
+}
+
 html {
   scroll-behavior: smooth;
 }
-.bg-uni {
-  background-color: #0b2a6f;
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #2b2b3a;
 }
-.text-uni {
-  color: #0b2a6f;
-}
+
 section {
-  scroll-margin-top: 70px;
+  scroll-margin-top: 70px; /* para que el menú fijo no tape los títulos */
+}
+
+/* ===== Clases de color reutilizables ===== */
+.bg-uni { background-color: var(--uni); }
+.bg-uni-dark { background-color: var(--uni-dark); }
+.bg-uni-light { background-color: var(--uni-light); }
+.text-uni { color: var(--uni); }
+
+/* ===== Botones morados ===== */
+.btn-uni {
+  background-color: var(--uni);
+  border-color: var(--uni);
+  color: #fff;
+}
+.btn-uni:hover {
+  background-color: var(--uni-dark);
+  border-color: var(--uni-dark);
+  color: #fff;
+}
+
+/* ===== Títulos de sección (con línea decorativa) ===== */
+.section-title {
+  color: var(--uni);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--uni);
+  border-radius: 2px;
+  margin: 0.6rem auto 0;
+}
+.section-subtitle {
+  text-align: center;
+  color: #6b6b80;
+  margin-bottom: 2.5rem;
 }
